@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نشوان الصبري لتربية وتسويق الدجاج – جودة عالية وخدمة موثوقة">
+    <meta name="keywords" content="تربية الدواجن, تسويق الدجاج, مزرعة دجاج">
+    <meta name="author" content="Nashwan Al-Sabri">
+    <meta name="google-site-verification" content="CODE_FROM_GOOGLE">
+    <meta charset="UTF-8">
+    <title>Nashwan Al-Sabri - Chicken Breeding & Marketing | نشوان الصبري لتربية وتسويق الدجاج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img.JPG">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.8;
+            scroll-behavior: smooth;
+            background-color: #f9f9f9;
+            transition: all 0.5s ease;
+        }
+
+        header {
+            position: fixed;
+            justify-content: space-between;
+            top: 0;
+            width: 100%;
+            height: 19%;
+            background: linear-gradient(#314217,#0b1b26);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            justify-content: left;
+            align-items: left;
+            list-style: none;
+
+        }
+        ul :hover{
+           opacity: 1;
+
+            
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #faf6f6;
+            font-weight: 500;
+            font-size: 20px;
+            font-family: system-ui;
+            letter-spacing: 0px;
+            margin:  30px;
+            padding: 6px 15px;
+            display:inline-block;
+            transition: 0.5s;
+            background-color: #314217;
+           
+        }
+
+         nav ul li a:hover{
+            background: #2f52a3;
+            border-radius: 20px;
+            transform: scale(1.2);
+            opacity: 0.5;
+
+         }
+
+        .logo {
+            font-size: 30px;
+            color: #e69500;
+
+
+        }
+
+        .hero {
+            height: 100vh;
+            background: url("images.jpeg") center/cover no-repeat fixed;
+            color: #e69500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero div {
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            
+
+        }
+
+        .btn {
+            background: #e69500;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffb84d;
+        }
+
+        section {
+            padding: 100px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .services,
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background:  #2f52a3;;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        form button {
+            background: #e69500;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #ffb84d;
+        }
+
+        /* English Styles */
+        body.en {
+            direction: ltr;
+            font-family: Arial, sans-serif;
+        }
+
+        body.en header nav .logo {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            z-index: 1000;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Map */
+        .map {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                document.body.classList.add('en');
+                document.body.classList.remove('ar');
+            } else {
+                document.body.classList.add('ar');
+                document.body.classList.remove('en');
+            }
+        }
+    </script>
+</head>
+
+<body class="ar">
+
+    <header>
+
+        <div class="logo">نشوان الصبري | Nashwan Al-Sabri
+                            
+        
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="home/index.html">الرئيسية / Home</a></li>
+                <li><a href="about/index.html">من نحن / About</a></li>
+                <li><a href="services/index.html">خدماتنا / Services</a></li>
+                <li><a href="products/index.html">منتجاتنا / Products</a></li>
+                <li><a href="contact/index.html">تواصل معنا / Contact</a></li>
+
+                <button onclick="switchLanguage('ar')">AR</button>
+                <button onclick="switchLanguage('en')">EN</button>
+            </ul>
+
+
+        </nav>
+
+    </header>
+
+    <section id="home" class="hero">
+        <div>
+
+            <h1>نشوان الصبري لتربية وتسويق الدجاج<br>Nashwan Al-Sabri - Chicken Breeding & Marketing</h1>
+            <p>جودة • صحة • ثقة<br>Quality • Healthy • Trusted</p>
+            <a href="#contact" class="btn">تواصل معنا / Contact Us</a>
+        </div>
+    </section>
+    <section>
+        <div>
+            <span style=" font-size: 32px;">مركز التسوق الخاص بنا/Our centershop</span>
+            <img src="img2.jpeg" width="100%" height="50%">
+
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>من نحن / About Us</h2>
+        <p>نحن في مزارع نشوان الصبري لتربية وتسويق الدجاج نعمل على تربية الدواجن بأفضل المعايير الصحية، مع الالتزام
+            بالجودة
+            والاستدامة لتقديم منتجات موثوقة تلبي احتياجات السوق المحلي.<br>
+            At Nashwan Al-Sabri, we specialize in premium chicken breeding and marketing, ensuring quality and
+            sustainable practices that meet the needs of local markets.</p>
+    </section>
+
+    <section id="services">
+        <h2>خدماتنا / Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <h3>تربية الدواجن / Breeding</h3>
+                <p>تربية احترافية باستخدام أحدث الأساليب لضمان صحة وجودة الدجاج.<br>Professional chicken breeding with
+                    modern care and health standards.</p>
+            </div>
+            <div class="card">
+                <h3>التسويق / Marketing</h3>
+                <p>تسويق مباشر وفعّال يربط بين المنتجين والعملاء.<br>Direct and effective marketing connecting producers
+                    with buyers.</p>
+            </div>
+            <div class="card">
+                <h3>التوصيل / Delivery</h3>
+                <p>خدمة توصيل سريعة وآمنة إلى جميع المناطق.<br>Reliable and safe delivery service to all locations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2>منتجاتنا / Featured Products</h2>
+        <div class="products">
+            <div class="card">دجاج لاحم عالي الجودة / Premium Broiler Chicken</div>
+            <div class="card">دجاج بيّاض / Layer Hens</div>
+            <div class="card">ديك بلدي / Local Rooster</div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h2>تواصل معنا / Contact Us</h2>
+        <form>
+            <input type="text" placeholder="الاسم / Name" required>
+            <input type="email" placeholder="البريد الإلكتروني / Email" required>
+            <textarea rows="5" placeholder="رسالتك / Your Message" required></textarea>
+            <button type="submit">إرسال / Send</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Our location/موقعنا </h2>
+
+     <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2327.099369937539!2d45.0079426!3d12.877352199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3df5f90066c30c9b%3A0x36474242284cc949!2sAl-Mimdara%20chicken%20marketing%20center!5e1!3m2!1sen!2sch!4v1766060314790!5m2!1sen!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+    </section>
+    <Section>
+          <img src="img.JPG" width="500" height="260" draggable="false" style="border-radius: 100px;
+                             box-shadow: 0 0 80px rgb(221, 99, 5); ">
+
+    </Section>
+
+    <a href="https://wa.me/+967 770 830 922" class="whatsapp-btn" target="_blank">📞</a>
+
+    <footer>
+        <p>© 2025 نشوان الصبري لتربية وتسويق الدجاج – جميع الحقوق محفوظة<br>© 2025 Nashwan Al-Sabri - All rights
+            reserved</p>
+    </footer>
+
+</body>
+
+</html>
